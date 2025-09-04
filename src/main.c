@@ -14,7 +14,7 @@ const char *str_success = "Request sent successfully.\n";
 
 int main(int argc, char **argv)
 {
-	/* Igni display socket */
+	/* CQP socket */
 
 	/* Socket descriptor */
 	int fd;
