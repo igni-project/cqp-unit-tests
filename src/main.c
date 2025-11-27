@@ -66,11 +66,11 @@ int main(int argc, char **argv)
 		sleep(1);
 
 		/* Send a 'Cast Point' request */
-		printf(str_try, "cqp_cast_point(1.23, 4.56, 7.89, %fd%)");
-		err = cqp_cast_point(1.23, 4.56, 7.89, fd);
+		printf(str_try, "cqp_cast_point(\%fd%, 1.23, 4.56, 7.89)");
+		err = cqp_cast_point(fd, 1.23, 4.56, 7.89);
         if (err)
 		{
-			printf(str_fail, "cqp_cast_point(1.23, 4.56, 7.89, %fd%)", err);
+			printf(str_fail, "cqp_cast_point(\%fd%, 1.23, 4.56, 7.89)", err);
 		}
 		else
 		{
@@ -81,13 +81,13 @@ int main(int argc, char **argv)
 
 		/* Send a 'Cast Ray' request */
 		printf(str_try,
-			"cqp_cast_ray(1.23, 4.56, 7.89, 98.7, 65.4, 32.1, %fd%)"
+			"cqp_cast_ray(\%fd%, 1.23, 4.56, 7.89, 98.7, 65.4, 32.1)"
 		);
-		err = cqp_cast_ray(1.23, 4.56, 7.89, 98.7, 65.4, 32.1, fd);
+		err = cqp_cast_ray(fd, 1.23, 4.56, 7.89, 98.7, 65.4, 32.1);
         if (err) 
 		{
 			printf(str_fail,
-				"cqp_cast_ray(1.23, 4.56, 7.89, 98.7, 65.4, 32.1, %fd%)", err
+				"cqp_cast_ray(\%fd%, 1.23, 4.56, 7.89, 98.7, 65.4, 32.1)", err
 			);
 		}
         else
